@@ -8,27 +8,27 @@ driver = webdriver.Chrome("chromedriver.exe")  # abrimos la herramienta que simu
 url = driver.get("https://counter.onlineclock.net/")  # abrimos la url en cuestion para testear
 
 
-def count_up(times):
-    if times < 0:
+def count_up(clicks):
+    if clicks < 0:
         up = True
         while up:
             increase = driver.execute_script("javascript:doCounter('up')")
     else:
-        while times != 0:
+        while clicks != 0:
             increase = driver.execute_script("javascript:doCounter('up')")
-            times -= 1
+            clicks -= 1
     time.sleep(1)
 
 
-def count_down(times):
-    if times < 0:
+def count_down(clicks):
+    if clicks < 0:
         down = True
         while down:
             decrease = driver.execute_script("javascript:doCounter('down')")
     else:
-        while times != 0:
+        while clicks != 0:
             decrease = driver.execute_script("javascript:doCounter('down')")
-            times -= 1
+            clicks -= 1
     time.sleep(1)
 
 
