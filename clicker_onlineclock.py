@@ -38,7 +38,7 @@ def reset_count():
     accept_alert = driver.switch_to.alert.accept()
 
 
-count_up(4)
+count_up(1204)
 count_down(325)
 reset_count()
 driver.close()  # cerramos el navegador
