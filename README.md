@@ -1,5 +1,5 @@
 # testing-selenium
-Probando algunas funcionalidades de selenium en https://counter.onlineclock.net/
+Probando algunas funcionalidades de selenium con Python en https://counter.onlineclock.net/
 
 Webdriver debe de estar en la misma ruta que el script
 
