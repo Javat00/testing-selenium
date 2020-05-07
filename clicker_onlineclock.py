@@ -41,3 +41,4 @@ def reset_count():
 count_up(4)
 count_down(325)
 reset_count()
+driver.close()
