@@ -35,10 +35,10 @@ def count_down(times):
 def reset_count():
     reset = driver.execute_script("javascript:doConfirmDelete()")
     time.sleep(1)
-    warning = driver.switch_to.alert.accept()
+    accept_alert = driver.switch_to.alert.accept()
 
 
 count_up(4)
 count_down(325)
 reset_count()
-driver.close()
+driver.close()  # cerramos el navegador
