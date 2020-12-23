@@ -4,7 +4,7 @@ El script simula la ejecución de un número determinado de clicks en las opcion
 
 Webdriver debe de estar en la misma ruta que el script y debe ser la misma versión que tu navegador Chrome.
 
-Para MAC, Linux y descargar nuevas versiones:
+Para MAC, Linux y para descargar nuevas versiones:
 ===========================================
 https://chromedriver.chromium.org/downloads
 ===========================================
