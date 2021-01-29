@@ -1,11 +1,13 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 ''' hay que tener en cuenta que el contador en la web empieza por 1, no por 0
     usar numeros negativos para ejecucion infinita  '''
 
-driver = webdriver.Chrome("chromedriver.exe")  # abrimos la herramienta que simula la navegacion humanana
+driver = webdriver.Chrome(ChromeDriverManager().install()) # abrimos/instalamos la herramienta 
 url = driver.get("https://counter.onlineclock.net/")  # abrimos la url en cuestion para testear
+time.sleep(1)
 
 
 def count_up(clicks):
@@ -36,9 +38,10 @@ def reset_count():
     reset = driver.execute_script("javascript:doConfirmDelete()")
     time.sleep(1)
     accept_alert = driver.switch_to.alert.accept()
+    time.sleep(1)
 
-
-count_up(1204)
-count_down(325)
-reset_count()
-driver.close()  # cerramos el navegador
+if __name__ == "__main__":  
+    count_up(1200)
+    count_down(325)
+    reset_count()
+    driver.close()  # cerramos el navegador
